@@ -1,19 +1,20 @@
 {
-  "name": "order",
+  "name": "order-service",
   "version": "1.0.0",
+  "description": "Order Service for E-commerce Platform",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
-    "start": "ts-node src/server.ts",
     "dev": "nodemon src/server.ts",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push",
-    "db:studio": "prisma studio"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:push": "prisma db push",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@prisma/client": "^6.15.0",
     "amqplib": "^0.10.9",
