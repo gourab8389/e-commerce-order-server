@@ -118,7 +118,7 @@ export class CategoryController {
         }
       };
 
-      await cacheService.set(cacheKey, result, 300); // 5 minutes cache
+      await cacheService.set(cacheKey, result, 300); // Cache for 5 minutes
 
       res.json({
         success: true,
